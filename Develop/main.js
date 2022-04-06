@@ -1,26 +1,29 @@
-var jumbo = document.querySelector(".jumbotron");
-var display3 = document.querySelector(".display-3");
-var lead = document.querySelector(".lead");
-var currentDay = document.querySelector("#currentDay");
-var container = document.querySelector(".container");
+var jumbo =$(".jumbotron");
+var display3 = $(".display-3");
+var lead = $(".lead");
+var currentDay = $("#currentDay");
+var container = $(".container");
+var textarea = $(".textarea");
+var past= $(".past");
+var present= $(".present");
+var future= $(".future");
 
 var currentDay = moment().format("dddd, MMMM Do YYYY ");
 $("#currentDay").text(currentDay);
-var lead = moment().format()
-var currentDay = moment().format()
-var container = moment().format()
+var currentHour = moment().format("HH"); {
+    console.log(currentHour);
+}
 
-var currentHour = (new Date()).getHours();
-$('.row my-row')
-  .each(function(){
-    var val = parseInt($(this).prop('id'));
-    if(val > currentHour && val < currentHour + 6){
-      $(this).css('.past');
-    }else if(val < currentHour && val > currentHour-6){
-      $(this).css('.present');
-    }else if(val === currentHour){
-      $(this).css('.future');
-    }else{
-      $(this).css('background-color','White');
+$(".time-block").each(function() {
+    
+    let time = $(this).attr("id");
+    if (currentHour == time) {
+        $(this).addClass("present");
+    } else if (currentHour < time) {
+        $(this).removeClass("present");
+        $(this).addClass("future");
+    } else if (currentHour > time) {
+        $(this).removeClass("future");
+        $(this).addClass("past");
     }
-  });
+});
