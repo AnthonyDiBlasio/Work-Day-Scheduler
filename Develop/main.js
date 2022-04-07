@@ -7,6 +7,7 @@ var textarea = $(".textarea");
 var past= $(".past");
 var present= $(".present");
 var future= $(".future");
+var timeblock = $(".time-block");
 
 var currentDay = moment().format("dddd, MMMM Do YYYY ");
 $("#currentDay").text(currentDay);
@@ -22,8 +23,34 @@ $(".time-block").each(function() {
     } else if (currentHour < time) {
         $(this).removeClass("present");
         $(this).addClass("future");
+        $(this).click(function(){
+            $(this).append("<input>");
+        });
     } else if (currentHour > time) {
         $(this).removeClass("future");
         $(this).addClass("past");
+        
+  
+  
+    
     }
+  
 });
+let buttons = document.querySelectorAll(".saveBtn")
+for (let i = 0; i < buttons.length; ++i) {
+    buttons[i].addEventListener('click', function(event) {
+        var inputVal = buttons[i].previousElementSibling.value;
+        console.log('input:', inputVal);
+        var Inum = i + 1;
+        localStorage.setItem('id-' + (i + 1) , inputVal);
+    })
+};
+function getDate() {
+    for(var i =0; i<10; i++){
+        var itemSave = localStorage.getItem("id-"+ i);
+        if(itemSave!=null){
+            document.querySelector("input[id-" + i + "]").value = itemSave
+        }
+    }
+}
+getDate();
