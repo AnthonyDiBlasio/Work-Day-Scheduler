@@ -1,5 +1,5 @@
 # Work-Day-Scheduler
-````
+```
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
@@ -7,7 +7,7 @@ SO THAT I can manage my time effectively
 
 ## Acceptance Criteria
 
-`````
+```
 GIVEN I am using a daily planner to create a schedule
 WHEN I open the planner
 THEN the current day is displayed at the top of the calendar
@@ -22,10 +22,10 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 ```
-!["url"](https://anthonydiblasio.github.io/Work-Day-Scheduler/)
-https://anthonydiblasio.github.io/Work-Day-Scheduler/
-!["screenshot"](https://raw.githubusercontent.com/AnthonyDiBlasio/Work-Day-Scheduler/main/Develop/Screenshot%202022-04-07%20183133.jpg)
-!["screenshot"](https://github.com/AnthonyDiBlasio/Work-Day-Scheduler/blob/main/Develop/Screenshot%202022-04-07%20183200.jpg)
-!["screenshot"](https://raw.githubusercontent.com/AnthonyDiBlasio/Work-Day-Scheduler/main/Develop/Screenshot%202022-04-09%20194059.jpg)
-!["screenshot"](https://raw.githubusercontent.com/AnthonyDiBlasio/Work-Day-Scheduler/main/Develop/Screenshot%202022-04-09%20194140.jpg)
+["url"](https://anthonydiblasio.github.io/Work-Day-Scheduler/)
 
+https://anthonydiblasio.github.io/Work-Day-Scheduler/
+
+![screenshot](https://raw.githubusercontent.com/AnthonyDiBlasio/Work-Day-Scheduler/main/Develop/Screenshot%202022-04-07%20183133.jpg)
+![screenshot](https://raw.githubusercontent.com/AnthonyDiBlasio/Work-Day-Scheduler/main/Develop/Screenshot%202022-04-09%20194059.jpg)
+![screenshot](https://raw.githubusercontent.com/AnthonyDiBlasio/Work-Day-Scheduler/main/Develop/Screenshot%202022-04-09%20194140.jpg)
