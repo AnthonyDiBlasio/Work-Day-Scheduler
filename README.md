@@ -22,7 +22,10 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 ```
-["url"](https://anthonydiblasio.github.io/Work-Day-Scheduler/)
-!["screenshot"]()
-!["screenshot"]()
-!["screenshot"]()
+!["url"](https://anthonydiblasio.github.io/Work-Day-Scheduler/)
+https://anthonydiblasio.github.io/Work-Day-Scheduler/
+!["screenshot"](https://raw.githubusercontent.com/AnthonyDiBlasio/Work-Day-Scheduler/main/Develop/Screenshot%202022-04-07%20183133.jpg)
+!["screenshot"](https://github.com/AnthonyDiBlasio/Work-Day-Scheduler/blob/main/Develop/Screenshot%202022-04-07%20183200.jpg)
+!["screenshot"](https://raw.githubusercontent.com/AnthonyDiBlasio/Work-Day-Scheduler/main/Develop/Screenshot%202022-04-09%20194059.jpg)
+!["screenshot"](https://raw.githubusercontent.com/AnthonyDiBlasio/Work-Day-Scheduler/main/Develop/Screenshot%202022-04-09%20194140.jpg)
+
