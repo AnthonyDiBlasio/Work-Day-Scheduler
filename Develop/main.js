@@ -7,8 +7,8 @@ $("#currentDay").text(currentDay);
 var currentHour = moment().format("HH"); {
     console.log(currentHour);
 }
-//getlocalStorage is a function that can be called to save input field to local storage
-getlocalStorage();
+//getlocalStorage is a function that can be called to get saved inputs and values from local storage
+ getlocalStorage();
 //using jquery syntax "color-block".each is a jquery function to match time with the appropriate css class
 $(".color-block").each(function() {
     
@@ -35,7 +35,7 @@ $(".color-block").each(function() {
 //         localStorage.setItem('id-' + (storageNum) , inputVal);
 //     })
 // };
-// this function was called previously: getLocalStorage is a for loop that goes through the newly created local storage and checks to see if its not null. then displays on html
+// this function gets the local storage and checks that it not empty 
 function getlocalStorage() {
     for(var i =0; i<10; i++){
         var inputSave = localStorage.getItem("id-"+ i);
@@ -44,11 +44,15 @@ function getlocalStorage() {
         }
     }
 }
+//making a for loop for each save button.
 $(".saveBtn").each(function(i){
     $(this).click(function(){
+    //new var InputVal is equal to saveBtn previous elem sib value
     var inputVal = ($(this).prev().val());
     var storageNum = i + 1;
+    //seting local storage to id- + storage num, and inputval
     localStorage.setItem('id-' + (storageNum) , inputVal);
    
     })
 })
+
