@@ -26,21 +26,29 @@ $(".color-block").each(function() {
   return
 });
 // for loop to listen for clicks in all of the buttons on the html then log the value of its previousElementSibling to the consoles local storage.
-let buttons = document.querySelectorAll(".saveBtn")
-for (let i = 0; i < buttons.length; ++i) {
-    buttons[i].addEventListener('click', function(event) {
-        var inputVal = buttons[i].previousElementSibling.value;
-        console.log('input:', inputVal);
-        var storageNum = i + 1;
-        localStorage.setItem('id-' + (storageNum) , inputVal);
-    })
-};
+// let buttons = $(".saveBtn");
+// for (let i = 0; i < buttons.length; ++i) {
+//     buttons[i].addEventListener(function(event) {
+//         var inputVal = buttons[i].previousElementSibling.value;
+//         console.log('input:', inputVal);
+//         var storageNum = i + 1;
+//         localStorage.setItem('id-' + (storageNum) , inputVal);
+//     })
+// };
 // this function was called previously: getLocalStorage is a for loop that goes through the newly created local storage and checks to see if its not null. then displays on html
 function getlocalStorage() {
     for(var i =0; i<10; i++){
         var inputSave = localStorage.getItem("id-"+ i);
         if(inputSave!=null){
-            document.querySelector("input[id-" + i + "]").value = inputSave
+           $("input[id-" + i + "]").val(inputSave) 
         }
     }
 }
+$(".saveBtn").each(function(i){
+    $(this).click(function(){
+    var inputVal = ($(this).prev().val());
+    var storageNum = i + 1;
+    localStorage.setItem('id-' + (storageNum) , inputVal);
+   
+    })
+})
